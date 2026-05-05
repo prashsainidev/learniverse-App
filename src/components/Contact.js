@@ -3,8 +3,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import { styles } from "../styles/styles";
-import { SectionWrapper } from "../hoc";
+
+
 import AmazingThankYouModal from "./ThankYouModal";
 
 const Contact = () => {
@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-16 sm:py-24 bg-white dark:bg-gray-900 w-full px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-gray-800">
+    <div id="contact" className="py-16 sm:py-24 bg-white dark:bg-gray-900 w-full px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-gray-800">
       <div className="max-w-3xl mx-auto w-full">
         <p className="text-sm sm:text-base text-indigo-600 dark:text-indigo-400 uppercase tracking-wider font-semibold mb-2">Get in touch</p>
         <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-12 tracking-tight">Contact.</h3>
@@ -118,4 +118,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;
