@@ -1,48 +1,28 @@
 // pages/founder.js
 import React from "react";
-import { motion } from "framer-motion";
 
 export default function FounderPage() {
-  // Animation variants for the image and text elements
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-  };
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-grow bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="max-w-6xl w-full bg-white/20 backdrop-blur-md rounded-xl p-8 flex flex-col md:flex-row items-center">
-          <motion.div
-            className="md:w-1/2 flex justify-center"
-            initial="hidden"
-            animate="visible"
-            variants={imageVariants}
-          >
-            <img
-              src="/images/creators/Prashant.jpeg" // sure this image exists in your public/images folder
-              alt="Founder"
-              className="rounded-full shadow-2xl w-64 h-64 object-cover transform hover:scale-105 transition-transform duration-500"
-            />
-          </motion.div>
-          <motion.div
-            className="md:w-1/2 mt-8 md:mt-0 md:pl-8 text-center md:text-left"
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-          >
-            <h1 className="text-4xl font-extrabold text-white mb-4">Meet Our Founder</h1>
-            <p className="text-lg text-white">
+    <section id="founder" className="py-16 sm:py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-3xl p-8 sm:p-12 md:p-16 flex flex-col md:flex-row items-center gap-10 sm:gap-16 border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+          <div className="w-full md:w-2/5 flex justify-center">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl ring-4 ring-white dark:ring-gray-800">
+              <img
+                src="/images/creators/Prashant.jpeg" // sure this image exists in your public/images folder
+                alt="Founder"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="w-full md:w-3/5 text-center md:text-left space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">Meet Our Founder</h2>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               Our founder's journey is one of innovation and passion. Discover the story behind Learniverse and how vision turned into reality. With a blend of creativity and determination, our leader has set a new benchmark for excellence in education and technology.
             </p>
-          </motion.div>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }

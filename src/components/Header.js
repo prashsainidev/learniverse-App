@@ -5,8 +5,6 @@ import { Menu, X, Sun, Moon, ChevronUp, ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import MobileMenu from "./MobileMenu";
-// Import Clerk hooks and components
-import { useClerk, useUser, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   const router = useRouter();
@@ -17,10 +15,6 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef(null);
   const [menuTop, setMenuTop] = useState(0);
-
-  // Clerk hooks: obtain the Clerk instance and user data
-  const clerk = useClerk();
-  const { isLoaded, user } = useUser();
 
   // Calculate the header's bottom position (plus a margin)
   useEffect(() => {
@@ -57,27 +51,15 @@ const Header = () => {
 
   const navItems = [
     { href: "/", text: "Home" },
-    { href: "/courses", text: "Courses" },
     { href: "/#about", text: "About" },
+    { href: "/#founder", text: "Founder" },
     { href: "/#contact", text: "Contact" },
-    { href: "/founder", text: "Founder" },
-    { href: "/services", text: "Services" },
-    { href: "/feedback", text: "Feedback" },
   ];
-
-  // Main navigation items (always visible)
-  const mainNavItems = navItems.filter(
-    (item) => !["Founder", "Services", "Feedback"].includes(item.text)
-  );
-  // Extra navigation items for the Explore dropdown
-  const extraNavItems = navItems.filter((item) =>
-    ["Founder", "Services", "Feedback"].includes(item.text)
-  );
 
   // Handler for navigation clicks (including smooth scrolling for hash links)
   const handleNavItemClick = (e, href) => {
     setActiveNav(href);
-    if (router.pathname === "/" && (href === "/#about" || href === "/#contact")) {
+    if (router.pathname === "/" && href.startsWith("/#")) {
       e.preventDefault();
       const targetId = href.replace("/#", "");
       const targetElement = document.getElementById(targetId);
@@ -86,7 +68,6 @@ const Header = () => {
       }
     }
     setMenuOpen(false);
-    setShowExtra(false);
   };
 
   return (
@@ -109,87 +90,21 @@ const Header = () => {
           </div>
 
           {/* Center: Desktop navigation */}
-          <nav className="hidden lg:flex space-x-6 text-base font-medium items-center">
-            {mainNavItems.map(({ href, text }) => (
+          <nav className="hidden lg:flex space-x-8 text-base font-medium items-center">
+            {navItems.map(({ href, text }) => (
               <Link
                 key={href}
                 href={href}
                 onClick={(e) => handleNavItemClick(e, href)}
                 className={`transition-colors duration-300 ease-in-out ${
                   activeNav === href
-                    ? "text-blue-600 dark:text-blue-400"
+                    ? "text-blue-600 dark:text-blue-400 font-semibold"
                     : "text-gray-900 dark:text-white hover:text-blue-500"
                 }`}
               >
                 {text}
               </Link>
             ))}
-
-            {/* Explore Dropdown */}
-            <div className="relative inline-block">
-              <button
-                onClick={() => setShowExtra((prev) => !prev)}
-                onMouseEnter={() => setShowExtra(true)}
-                onMouseLeave={() => setShowExtra(false)}
-                className="flex items-center space-x-1 transition-colors duration-300 ease-in-out text-gray-900 dark:text-white hover:text-blue-500"
-              >
-                <span>Explore</span>
-                {showExtra ? (
-                  <ChevronUp size={20} className="text-blue-600 dark:text-blue-400" />
-                ) : (
-                  <ChevronDown
-                    size={20}
-                    className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
-                  />
-                )}
-              </button>
-              <div
-                onMouseEnter={() => setShowExtra(true)}
-                onMouseLeave={() => setShowExtra(false)}
-                className={`absolute right-0 top-full mt-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl z-10 transition-all duration-300 transform ${
-                  showExtra ? "opacity-100 scale-100 visible" : "opacity-0 scale-95 invisible"
-                }`}
-              >
-                <div className="py-2">
-                  {extraNavItems.map(({ href, text }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      onClick={(e) => handleNavItemClick(e, href)}
-                      className={`block px-4 py-2 transition-colors duration-300 ease-in-out ${
-                        activeNav === href
-                          ? "text-blue-600 dark:text-blue-400"
-                          : "text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
-                      }`}
-                    >
-                      {text}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Login / User Icon Area */}
-            <div className="ml-4">
-              {!isLoaded ? (
-                <div style={{ width: "40px", height: "40px" }}></div>
-              ) : user ? (
-                // Display a greeting next to the UserButton
-                <div className="flex items-center space-x-2">
-                  <span className="text-gray-900 dark:text-white">
-                    Hi, {user.firstName || "User"}!
-                  </span>
-                  <UserButton />
-                </div>
-              ) : (
-                <button
-                  onClick={() => clerk.openSignIn()}
-                  className="btn btn-primary btn-sm rounded-full text-white"
-                >
-                  Login
-                </button>
-              )}
-            </div>
           </nav>
 
           {/* Right: Theme toggler & Mobile Menu Button */}

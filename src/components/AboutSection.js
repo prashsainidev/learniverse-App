@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FaRocket, FaEye, FaHandshake } from "react-icons/fa";
 
 export default function AboutSection() {
@@ -8,147 +7,92 @@ export default function AboutSection() {
       {/* Hero Section (About) */}
       <section
         id="about"
-        className="relative h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-indigo-900 text-white"
       >
-        <div className="relative z-10 text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg"
-          >
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-24">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
             Welcome to Learniverse
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="mt-4 text-xl md:text-2xl text-white"
-          >
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-indigo-100 mb-10 max-w-2xl mx-auto leading-relaxed">
             Empowering lifelong learning through innovation.
-          </motion.p>
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mt-8 flex justify-center space-x-4"
-          >
-            <button className="px-8 py-4 bg-white text-indigo-700 font-semibold rounded-full hover:bg-gray-200 transition">
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <button className="w-full sm:w-auto px-8 py-3 bg-white text-indigo-900 font-bold rounded-full hover:bg-gray-100 transition-colors shadow-sm active:scale-95">
               Get Started
             </button>
-            <button className="px-8 py-4 bg-indigo-700 text-white font-semibold rounded-full hover:bg-indigo-800 transition">
+            <button className="w-full sm:w-auto px-8 py-3 bg-indigo-800 text-white font-bold rounded-full hover:bg-indigo-700 transition-colors shadow-sm border border-indigo-700 active:scale-95">
               Learn More
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* About Content Section */}
-      <section className="relative pt-24 pb-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6 text-center"
-          >
-            About Learniverse
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-lg md:text-xl text-secondary mb-12 text-center"
-          >
-            Learniverse is an innovative e-learning platform that blends technology
-            with creative learning experiences.
-          </motion.p>
+      <section className="relative py-16 sm:py-24 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">
+              About Learniverse
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
+              Learniverse is an innovative e-learning platform that blends technology
+              with creative learning experiences.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Our Mission */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center bg-black-100 p-8 rounded-lg shadow-md transition duration-300 hover:shadow-[0_10px_30px_rgba(79,70,229,0.5)]"
-            >
-              <FaRocket className="text-secondary text-5xl mb-4" />
-              <h3 className="text-2xl font-semibold mb-2 text-white">
+            <div className="flex flex-col items-center text-center bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+                <FaRocket className="text-3xl" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                 Our Mission
               </h3>
-              <p className="text-center text-gray-300">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 To provide accessible, engaging, and innovative learning experiences.
               </p>
-            </motion.div>
+            </div>
             {/* Our Vision */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center bg-black-100 p-8 rounded-lg shadow-md transition duration-300 hover:shadow-[0_10px_30px_rgba(79,70,229,0.5)]"
-            >
-              <FaEye className="text-secondary text-5xl mb-4" />
-              <h3 className="text-2xl font-semibold mb-2 text-white">
+            <div className="flex flex-col items-center text-center bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+                <FaEye className="text-3xl" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                 Our Vision
               </h3>
-              <p className="text-center text-gray-300">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 To transform education through creativity, technology, and community engagement.
               </p>
-            </motion.div>
+            </div>
             {/* Our Values */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center bg-black-100 p-8 rounded-lg shadow-md transition duration-300 hover:shadow-[0_10px_30px_rgba(79,70,229,0.5)]"
-            >
-              <FaHandshake className="text-secondary text-5xl mb-4" />
-              <h3 className="text-2xl font-semibold mb-2 text-white">
+            <div className="flex flex-col items-center text-center bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+                <FaHandshake className="text-3xl" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                 Our Values
               </h3>
-              <p className="text-center text-gray-300">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Innovation, inclusivity, and excellence drive every aspect of our work.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Community CTA Section */}
-      <section className="relative py-16">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-8 text-center">
-          <motion.h3
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="text-3xl font-bold text-white mb-4"
-          >
+      <section className="relative py-16 sm:py-24 border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
             Join Our Community
-          </motion.h3>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-lg text-secondary mb-8"
-          >
+          </h3>
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
             Connect with fellow learners and educators to transform your learning
             experience.
-          </motion.p>
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="px-8 py-4 bg-indigo-700 text-white font-semibold rounded-full hover:bg-indigo-800 transition"
-          >
+          </p>
+          <button className="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg active:scale-95">
             Get Started Today
-          </motion.button>
+          </button>
         </div>
       </section>
     </div>
