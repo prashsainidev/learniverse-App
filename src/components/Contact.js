@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+
 
 
 
@@ -31,38 +31,22 @@ const Contact = () => {
     }
     setLoading(true);
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Prashant Saini",
-          from_email: form.email,
-          to_email: "singingph.buddhu@gmail.com",
-          message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setShowModal(true); 
-          setForm({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+    // Simulate a network request for the static form
+    setTimeout(() => {
+      setLoading(false);
+      setShowModal(true); 
+      setForm({ name: "", email: "", message: "" });
+    }, 1000);
   };
 
   return (
     <div id="contact" className="py-16 sm:py-24 bg-white dark:bg-gray-900 w-full px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-gray-800">
       <div className="max-w-3xl mx-auto w-full">
         <p className="text-sm sm:text-base text-indigo-600 dark:text-indigo-400 uppercase tracking-wider font-semibold mb-2">Get in touch</p>
-        <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-12 tracking-tight">Contact.</h3>
+        <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">Contact.</h3>
+        <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 italic mb-10 border-l-4 border-indigo-500 pl-4 bg-gray-50 dark:bg-gray-800/50 p-3 rounded-r-lg">
+          Note: This is a static UI demonstration form. Messages submitted here are not sent to any server.
+        </p>
         <form
           ref={formRef}
           onSubmit={handleSubmit}

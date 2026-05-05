@@ -31,14 +31,14 @@ Learniverse App is a modern, high-performance learning platform with a premium, 
 - **Dynamic Theming:**  
   Flawless dark/light mode support using `next-themes`.
 - **Integrated Contact System:**  
-  Direct email messaging via EmailJS with a minimalist, premium form design.
+  Minimalist, premium form design for seamless UI demonstrations.
 
 ## Technologies Used
 
 - **Next.js (v16.2+):** Framework for server-side rendering and static site generation.
 - **React (v19):** Library for building modern user interfaces.
 - **Tailwind CSS & DaisyUI:** Utility-first CSS framework for rapid, responsive UI development.
-- **EmailJS:** Enables sending emails directly from the client.
+
 - **Lucide React & React Icons:** Scalable vector icons.
 - **next-themes:** Enables easy theming (dark/light mode).
 - **ESLint & PostCSS:** Tools for linting and processing CSS.
