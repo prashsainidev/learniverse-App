@@ -124,39 +124,17 @@ Contributions are welcome! To contribute:
 ## 📫 Let's Connect
 
 <p align="center">
-  <a href="https://prashant-pi.vercel.app/" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/000000/domain.png" alt="Portfolio" width="30" height="30"/>
-  </a>
-  <a href="https://www.linkedin.com/in/prashant-saini" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/0077B5/linkedin.png" alt="LinkedIn" width="30" height="30"/>
-  </a>
-  <a href="https://x.com/Prashan58889893" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/1DA1F2/twitter.png" alt="Twitter" width="30" height="30"/>
-  </a>
-  <a href="https://github.com/prashantsaini1525" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" width="30" height="30"/>
-  </a>
-  <a href="mailto:Prashant.sain.3150@gmail.com" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/FF0000/email.png" alt="Email" width="30" height="30"/>
-  </a>
-  <a href="https://instagram.com/prashant_saini_1525" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/E4405F/instagram-new.png" alt="Instagram" width="30" height="30"/>
-  </a>
-  <a href="https://www.youtube.com/@prashant_saini_1525" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/FF0000/youtube-play.png" alt="YouTube" width="30" height="30"/>
-  </a>
-  <a href="https://medium.com/@prashant_ps" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/000000/medium-logo.png" alt="Medium" width="30" height="30"/>
-  </a>
-  <a href="https://wa.me/9557745536" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" width="30" height="30"/>
-  </a>
-  <a href="https://leetcode.com/u/prashantsainii/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/leetcode.svg" alt="LeetCode" width="30" height="30"/>
-  </a>
-  <a href="https://www.hackerrank.com/profile/Prashant_saini_1" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/hackerrank.svg" alt="HackerRank" width="30" height="30"/>
-  </a>
+  <a href="https://prashant-pi.vercel.app/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/domain.png" alt="Portfolio" width="30" height="30"/></a>
+  <a href="https://www.linkedin.com/in/prashant-saini" target="_blank"><img src="https://img.icons8.com/ios-filled/50/0077B5/linkedin.png" alt="LinkedIn" width="30" height="30"/></a>
+  <a href="https://x.com/Prashan58889893" target="_blank"><img src="https://img.icons8.com/ios-filled/50/1DA1F2/twitter.png" alt="Twitter" width="30" height="30"/></a>
+  <a href="https://github.com/prashantsaini1525" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" width="30" height="30"/></a>
+  <a href="mailto:Prashant.sain.3150@gmail.com" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FF0000/email.png" alt="Email" width="30" height="30"/></a>
+  <a href="https://instagram.com/prashant_saini_1525" target="_blank"><img src="https://img.icons8.com/ios-filled/50/E4405F/instagram-new.png" alt="Instagram" width="30" height="30"/></a>
+  <a href="https://www.youtube.com/@prashant_saini_1525" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FF0000/youtube-play.png" alt="YouTube" width="30" height="30"/></a>
+  <a href="https://medium.com/@prashant_ps" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/medium-logo.png" alt="Medium" width="30" height="30"/></a>
+  <a href="https://wa.me/9557745536" target="_blank"><img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" width="30" height="30"/></a>
+  <a href="https://leetcode.com/u/prashantsainii/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/leetcode.svg" alt="LeetCode" width="30" height="30"/></a>
+  <a href="https://www.hackerrank.com/profile/Prashant_saini_1" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/hackerrank.svg" alt="HackerRank" width="30" height="30"/></a>
 </p>
 
 ---
