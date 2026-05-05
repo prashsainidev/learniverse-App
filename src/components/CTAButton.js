@@ -6,9 +6,9 @@ const CTAButton = ({ href, target, variant = 'primary', children, className = ''
   let variantStyles = "";
 
   if (variant === 'primary') {
-    variantStyles = "bg-yellow-400 text-gray-900 hover:bg-yellow-500";
+    variantStyles = "bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent";
   } else if (variant === 'secondary') {
-    variantStyles = "bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20";
+    variantStyles = "bg-transparent text-indigo-600 dark:text-indigo-400 border-2 border-indigo-600 dark:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-gray-800";
   }
 
   return (

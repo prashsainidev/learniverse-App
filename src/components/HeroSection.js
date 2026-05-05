@@ -21,21 +21,21 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[90vh] pt-32 pb-16 sm:pt-40 sm:pb-24 text-white flex items-center justify-center text-center">
+    <section className="relative w-full min-h-[90vh] pt-32 pb-16 sm:pt-40 sm:pb-24 flex items-center justify-center text-center bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <p className="text-base sm:text-lg font-medium italic text-indigo-200 mb-6 sm:mb-8">
+        <p className="text-base sm:text-lg font-medium italic text-indigo-600 dark:text-indigo-400 mb-6 sm:mb-8">
           "The beautiful thing about learning is that nobody can take it away from you."
         </p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 sm:mb-8 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 sm:mb-8 tracking-tight text-gray-900 dark:text-white">
           Unlock Your Potential
           <br className="hidden sm:block" />
           {" "}with{" "}
-          <span className="text-yellow-400">
+          <span className="text-indigo-600 dark:text-indigo-400">
             {mounted && <AnimatedText words={words} />}
           </span>{" "}
           🚀
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
           Education is a journey of continuous growth and discovery. Join us to explore knowledge, skills, and innovative learning experiences!
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
@@ -57,7 +57,7 @@ const HeroSection = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-50"
           onClick={scrollToNextSection}
         >
-          <FaChevronDown className="animate-bounce text-white text-3xl" />
+          <FaChevronDown className="animate-bounce text-indigo-600 dark:text-indigo-400 text-3xl" />
         </div>
       </div>
     </section>

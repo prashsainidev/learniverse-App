@@ -3,11 +3,11 @@ import React from "react";
 
 export default function FounderPage() {
   return (
-    <section id="founder" className="py-16 sm:py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+    <section id="founder" className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-3xl p-8 sm:p-12 md:p-16 flex flex-col md:flex-row items-center gap-10 sm:gap-16 border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+        <div className="flex flex-col md:flex-row items-center gap-10 sm:gap-16">
           <div className="w-full md:w-2/5 flex justify-center">
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl ring-4 ring-white dark:ring-gray-800">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-white dark:ring-gray-700">
               <img
                 src="/images/creators/Prashant.jpeg" // sure this image exists in your public/images folder
                 alt="Founder"

@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 
 export default function HomePage() {
   return (
-    <div className="relative z-0 bg-primary">
+    <div className="relative z-0 bg-white dark:bg-gray-900 font-sans">
       <HeroSection />
       <section id="next-section">
         <AboutSection />

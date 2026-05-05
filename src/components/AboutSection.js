@@ -7,20 +7,20 @@ export default function AboutSection() {
       {/* Hero Section (About) */}
       <section
         id="about"
-        className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-indigo-900 text-white"
+        className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-gray-800"
       >
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-24">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900 dark:text-white">
             Welcome to Learniverse
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-indigo-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Empowering lifelong learning through innovation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="w-full sm:w-auto px-8 py-3 bg-white text-indigo-900 font-bold rounded-full hover:bg-gray-100 transition-colors shadow-sm active:scale-95">
+            <button className="w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 transition-colors shadow-sm active:scale-95">
               Get Started
             </button>
-            <button className="w-full sm:w-auto px-8 py-3 bg-indigo-800 text-white font-bold rounded-full hover:bg-indigo-700 transition-colors shadow-sm border border-indigo-700 active:scale-95">
+            <button className="w-full sm:w-auto px-8 py-3 bg-transparent text-indigo-600 dark:text-indigo-400 font-bold rounded-full border-2 border-indigo-600 dark:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-gray-700 transition-colors shadow-sm active:scale-95">
               Learn More
             </button>
           </div>
@@ -39,10 +39,10 @@ export default function AboutSection() {
               with creative learning experiences.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
             {/* Our Mission */}
-            <div className="flex flex-col items-center text-center bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-indigo-50 dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
                 <FaRocket className="text-3xl" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -53,8 +53,8 @@ export default function AboutSection() {
               </p>
             </div>
             {/* Our Vision */}
-            <div className="flex flex-col items-center text-center bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-indigo-50 dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
                 <FaEye className="text-3xl" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -65,8 +65,8 @@ export default function AboutSection() {
               </p>
             </div>
             {/* Our Values */}
-            <div className="flex flex-col items-center text-center bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-indigo-50 dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
                 <FaHandshake className="text-3xl" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
